@@ -1,0 +1,41 @@
+.navbar {
+    /* background-color: rgb(246, 207, 162); */
+    color: #edc434;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100px;
+    transition: background-color 0.3s ease;
+    text-decoration-thickness: 30px; 
+    background-color: transparent;
+   
+}
+
+.navbar.scrolled {
+    background-color: #8B4513; /* Change to your desired color */
+  }
+
+  
+.maincontent {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    padding-left: 5%;
+}
+
+.nav-components {
+    display: flex;
+    list-style: none;
+    padding-left: 110%;
+    padding-bottom: 2%;
+}
+
+.nav-components li {
+    padding: 10px 30px 15px 30px;
+    font-weight: bold; 
+}
