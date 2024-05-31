@@ -2,37 +2,56 @@ import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/Logo-04.png';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Sidebar from '../Sidebar/Sidebar'; 
+import Overlay from '../Overlay/Overlay';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
+  const[showSidebar,setShowSidebar]=useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      const threshold = 10; // Adjust this threshold as needed
-      setScrolled(offset > threshold);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const offset = window.scrollY;
+  //     const threshold = 10; // Adjust this threshold as needed
+  //     setScrolled(offset > threshold);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  const toggleSidebar=()=>{
+    setShowSidebar(!showSidebar)
+  }
+
+  const closeSidebar=()=>{
+    setShowSidebar(false)
+  }
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <>
+    <nav className='navbar'>
       <div className="maincontent">
       <Link to='/'><img src={Logo} alt="logo" className="img" /></Link>  
-        <ul className="nav-components">
-          <li><Link to="/"style={{ color:'#edc434',textDecoration:'none'}}>Home</Link></li>
-          <li><Link to="/about" style={{ color:'#edc434',textDecoration:'none'}}>About</Link></li> {/* Link to the About page */}
-          <li>Services</li>
-          <li>Orders</li>
-        </ul>
+
+      <FontAwesomeIcon 
+            icon={faBars} 
+            style={{ marginLeft: '1190px', width: '40px', height: '30px', marginTop: '0px', cursor: 'pointer' }} 
+            onClick={toggleSidebar} 
+          />
       </div>
     </nav>
+    {showSidebar && <Overlay closeOverlay={closeSidebar} />}
+     {showSidebar && <Sidebar closeSidebar={closeSidebar} />}
+     </>
   );
+
 }
 
 export default Navbar;
+

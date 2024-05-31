@@ -1,0 +1,83 @@
+.footer{
+background-color: rgb(160, 109, 47);
+display: flex;
+
+}
+
+
+.img{
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+}
+.section1{
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <; */
+  font-style: normal;
+  /* text-transform: uppercase; */
+  margin-left: 10px   ;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.section2{
+margin-left: 40px;
+margin-top: 30px;
+
+}
+
+.links{
+ 
+    color:black;
+    text-decoration: none;
+}
+
+.section2 li{
+    list-style: none;
+}
+.material-symbols-outlined{
+width: 10px;
+height: 10px;
+
+}
+.section3{
+    margin-left: 40px;
+    margin-top: 30px;
+    
+    }
+    
+    .section3 li{
+        list-style: none;
+    }
+    
+    input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .sectionl{
+        font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      /* font-weight: <; */
+      font-style: normal;
+      /* text-transform: uppercase; */
+      margin-left: 90px   ;
+      text-align: center;
+      margin-top: 20px;
+    }
+    input[type='email'] {
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 2px solid black;
+        width: 200px;
+    }
+    
+
+    input[type='email']::placeholder {
+        color: #0b0a0a; /* Change this to the desired color */
+    }

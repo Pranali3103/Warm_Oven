@@ -1,0 +1,10 @@
+.sidebar-component{
+    color:antiquewhite;
+
+}
+
+.sidebar-component li{
+    text-decoration: none;
+    list-style-type:none;
+}
+

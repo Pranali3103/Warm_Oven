@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import CakeImage from "../../assets/cake-02.png"; // Import the image
 import Photo from "../../assets/left-side-heading.png";
 import "./Homepage.css";
+import Footer from "../../components/Footer/Footer";
 const Homepage = () => {
   return (
     <div className="homepage">
@@ -32,6 +33,7 @@ const Homepage = () => {
           </span>
         </p>
         {/* <p>Our Story</p> */}
+  
       </div>
     </div>
   );

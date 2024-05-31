@@ -8,13 +8,12 @@
     transition: background-color 0.3s ease;
     text-decoration-thickness: 30px; 
     background-color: transparent;
+    left: 0;
+    right:0;
+    top: 0;
+    z-index: 2000; 
    
 }
-
-.navbar.scrolled {
-    background-color: #8B4513; /* Change to your desired color */
-  }
-
   
 .maincontent {
     display: flex;
@@ -23,9 +22,11 @@
 }
 
 .img {
-    width: 200px;
-    height: 200px;
-    padding-left: 5%;
+    width: 200px !important;
+    height: 200px  !important;
+    padding-left: 30%;
+    margin-top: 50px;
+
 }
 
 .nav-components {
